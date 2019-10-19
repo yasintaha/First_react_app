@@ -14,10 +14,15 @@ import './App.css';
 
 class App extends Component{
   render(){
-    var a = 'with the name first_my_app'
+    var first_name = 'Rakesh'
+    var last_name = 'patil'
+    var label_style = {
+      color:'blue'
+    }
     return (
       <header className='App'>  
-        <h3>first react app {a}</h3>
+        <h3><label style={label_style }>First name : {first_name}</label></h3><br/>
+        <h3><label style={label_style }>Last name : {last_name}</label></h3>
       </header>
     )
   }
