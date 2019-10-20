@@ -2,19 +2,9 @@ import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <h1>Welcome to react</h1>
-//       </header>
-//     </div>
-//   );
-// }
-
 class App extends Component{
   render(){
-    var first_name = 'Rakesh'
+    var first_name = 'Rakesh changes made here'
     var last_name = 'patil'
     var label_style = {
       color:'blue'
