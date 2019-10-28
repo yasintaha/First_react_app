@@ -1,6 +1,9 @@
 import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import UserList from './Sample'
+
+
 
 const list = [
   {
@@ -30,24 +33,32 @@ class App extends Component{
     }
     return (
       <header className='App'>  
-        <h3><label style={label_style }>First name : {first_name}</label></h3><br/>
-        <h3><label style={label_style }>Last name : {last_name}</label></h3>
-        <h4>Iterating starts below</h4>
         <p>
           {list.map((val,index,arr)=>{
               return (
-              <div>
-                <h4>{index}</h4>
-                <h3>{val.title}</h3>
-                <h3>{val.author}</h3>
-              </div>)
+                <div key={val.objectID}>
+                    <span>
+                      <a href={val.url}>{val.title}</a>
+                    </span>
+                    <span>
+                      {val.author}
+                    </span><br />
+                    <span>
+                      {val.num_comments}
+                    </span>
+                    <span>
+                      {val.points}
+                    </span>
+                    <span>
+                      {val.objectID}
+                    </span>
+                </div>
+                )
           })}
         </p>
-
       </header>
     )
   }
 }
-
 
 export default App;
